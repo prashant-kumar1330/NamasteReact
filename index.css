@@ -1,0 +1,97 @@
+/* .nav-body{
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    border: black solid;
+}
+
+
+.nav-items > ul {
+    list-style-type: none;
+    display: flex;
+   
+}
+
+.nav-items{
+    display: flex; 
+}
+
+.Login-btn{
+  margin-top: 50px;
+  height: 27px;
+ cursor: pointer;
+ margin-right: 2px;
+}
+
+.nav-items > ul >li{
+    
+    padding: 10px;
+    margin: 10px;
+    font-size: large;
+    display: flex;
+}
+
+.nav-items > ul >li:hover{
+    color: #e60021;
+}
+
+.resCard{
+width: 200px;
+word-wrap: break-word;
+
+padding: 5px;
+margin: 10px;
+
+}
+
+.resCard:hover{
+  border: 1px solid black;
+  
+}
+.res-image{
+    width: 190px;
+ 
+}
+
+.body{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search-bar{
+    padding-top: 8px;
+}
+
+
+.res-list{
+        display: flex;
+    flex-wrap: wrap;
+}
+
+.btn{
+    padding: 3px;
+    margin: 5px;
+}
+
+.logo{
+    height: 100px; 
+    margin: 13px;
+}
+
+.reslogo{
+    height: 150px;
+    align-items:end;
+}
+
+.resdetails{
+    display: flex;
+}
+
+.food-info{
+    width: 70%;
+    flex-wrap: wrap;
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

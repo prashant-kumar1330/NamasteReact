@@ -1,0 +1,39 @@
+pacakge.json is configuration of npm
+
+command for installing npm in project or for creating package.json  => npm init
+command for installing dependencies is => npm install -D "dependency name"
+
+dev-dependicies = > it is only required for development
+normal dependencies => they will be required in production also
+
+
+  "parcel": "^2.8.3"  => here this "^" is because if later new minor version release of any package then it will automatically download that for your app
+  but if you place "~" then it will download only the major version release
+
+  parcel is bundler , the job of bundler is to make your code more consize/optimize so that it can go to production ready
+ it combines many JavaScript code files into a single one that is production-ready loadable in the browser and helps you keep your code organised by making it easy to import and use other JavaScript files (modules) in your code
+
+pacakge-lock.json will contain exact versions of your dependencies , lets suppose you put "^" and your dependency version is upgraded so it will not change in pacakge.json but it will store it in pacakage lock .json
+
+there is integrity tag in package-lock.json it will store the hash code and it will just compare the hash our your local project dependency version with the version which is in production
+
+Node modules is the folder which contains the actual files / codes of your dependicies and also their dependencies. thats why it is so big in size and each dependency in it has its own pacakage-lock.json and pacakge.json
+
+transitive dependencies => it means your project depend on some another dependencies and that dependencies also depend on anothers.
+
+node modules will be re created so thats why you should not push it to the git 
+
+npm install is the command which will re create the node module , so basically what it do is it install all the dependencies again which is there in your pacakage.json
+
+if in pacakage.json file you dont want any upgradation of your dependencies you can remove both "~,^" from the front of the version
+
+command for creating development build for us  "npx parcel index.html"
+command for creating development build for us  "npx parcel build index.html"
+
+
+jsx is JavaScript xml it is a html like content and it will converted to react element using the babel and the javascript object
+the render method convert it to html tag
+
+so if we return jsx from a function it is known react component and be sure name of the function will always start from capital letter
+
+component composition is => composing composition is using one component into another component
