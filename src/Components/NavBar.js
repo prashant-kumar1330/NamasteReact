@@ -2,13 +2,18 @@ import { useState , useContext } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../logo.png"
 import userContext from "../Utils/userContext";
+import { useSelector } from "react-redux";
+
 
 const NavBar =()=>{
    
   const [Login_Logut , setLoginLogout] = useState("Login")
      
   const {user}= useContext(userContext);
-
+  const cartItem = useSelector((store) =>{
+    return store.cart.item
+  })
+  console.log("cartItem => "+cartItem)
     return (
       <div className="nav-body flex bg-slate-200 shadow justify-between ">
         <div>
@@ -27,8 +32,11 @@ const NavBar =()=>{
 
             <li className="px-4 font-bold  hover:text-red-400"> Sign In
             </li>
-            <li className="px-4 font-bold  hover:text-red-400">Cart
+            <Link to='/cart'>
+            <li className="px-4 font-bold  hover:text-red-400">Cart {cartItem.length}
             </li>
+            </Link>
+           
             <Link to="/about">
               <li className="px-4 font-bold hover:text-red-400">About
               </li>
@@ -45,6 +53,7 @@ const NavBar =()=>{
             {Login_Logut}
           </button>
             </li>
+           
             <h1>
               {user.name +" "+ user.email}
             </h1>

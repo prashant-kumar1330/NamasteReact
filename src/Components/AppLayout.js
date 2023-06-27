@@ -4,6 +4,8 @@ import Footer from "./Footer"
 import { Outlet } from "react-router-dom"
 import { useState } from "react"
 import userContext from "../Utils/userContext"
+import {Provider} from "react-redux"
+import store from "../Utils/store"
 
 
 const AppLayout = ()=>{
@@ -15,11 +17,14 @@ const AppLayout = ()=>{
 
     return (
       <div className="AppRoot"> 
+      <Provider store={store}>
       <userContext.Provider value={{user:user, setUser:setUser}}>
         <NavBar/>
         <Outlet/>
         <Footer/>
       </userContext.Provider>
+      </Provider>
+
    
       </div>
     )

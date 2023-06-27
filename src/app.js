@@ -9,6 +9,7 @@ import Contact from "./Components/Contact";
 import RestrauntsDetails from "./Components/RestrauntDetails";
 import Profile from "./Components/Profile";
 import Profilecls from "./Components/ProfileClass";
+import Cart from "./Components/Cart";
 //import Instamart from "./Components/Instamart";
 
 
@@ -132,6 +133,10 @@ const appRouter = createBrowserRouter([
           <Instamart/>
         </Suspense>
         
+       },
+       {
+         path:"/cart",
+         element:<Cart/>
        }
     ]
   },
